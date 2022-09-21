@@ -1,2 +1,66 @@
-# traffic-data-warehouse
+# Traffic-data-warehouse
+
+***
+
+Data Engineering: Data warehouse tech stack with MySQL, DBT, Airflow
+
+**Table of Contents**
+- [Traffic-data-warehouse](#Traffic-data-warehouse)
+  - [Overview](#overview)
+  - [About](#about)
+  - [Project Structure](#project-structure)
+    - [.github](#.github)
+    - [data](#data)
+    - [notebooks](#notebooks)
+    - [scripts](#scripts)
+    - [tests](#tests)
+    - [root folder](#root-folder)
+
+***
+
+## Overview
+
 A city traffic department wants to collect traffic data using swarm UAVs (drones) from a number of locations in the city and use the data collected for improving traffic flow in the city and for a number of other undisclosed projects. Your startup is responsible for creating a scalable data warehouse that will host the vehicle trajectory data extracted by analyzing footage taken by swarm drones and static roadside cameras.
+
+
+## About
+
+The data warehouse should take into account future needs, organise data such that a number of downstream projects query the data efficiently. You should use the Extract Load Transform (ELT) framework using DBT.  Unlike the Extract, Transform, Load (ETL), the ELT framework helps analytic engineers in the city traffic department setup transformation workflows on a need basis.  
+
+
+
+![Alt text](Tech_stack_flow.png?raw=true "Tech stack")
+
+
+## Project Structure
+The repository has a number of files including python scripts, jupyter notebooks, raw and cleaned data, and text files. Here is their structure with a brief explanation.
+
+
+### .github
+- a configuration file for github actions and workflow
+
+### data
+- the folder where the raw, and cleaned datasets' csv files are stored
+
+### notebooks
+- `EDA.ipynb`: a jupyter notebook that Explanatory Data Analysis
+
+
+
+### scripts
+- Different python utility scripts that have different purposes.
+
+### tests
+
+
+### root folder
+- `requirements.txt`: a text file lsiting the projet's dependancies
+- `.gitignore`: a text file listing files and folders to be ignored
+- `README.md`: Markdown text with a brief explanation of the project and the repository structure.
+
+
+
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
