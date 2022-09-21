@@ -58,7 +58,7 @@ The repository has a number of files including python scripts, jupyter notebooks
 - `.gitignore`: a text file listing files and folders to be ignored
 - `README.md`: Markdown text with a brief explanation of the project and the repository structure.
 
-
+***
 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
