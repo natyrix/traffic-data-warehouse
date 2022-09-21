@@ -64,3 +64,13 @@ The repository has a number of files including python scripts, jupyter notebooks
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
+
+
+[contributors-shield]: https://img.shields.io/github/contributors/natyrix/traffic-data-warehouse.svg?style=for-the-badge
+[contributors-url]: https://github.com/natyrix/traffic-data-warehouse/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/natyrix/traffic-data-warehouse.svg?style=for-the-badge
+[forks-url]: https://github.com/natyrix/traffic-data-warehouse/network/members
+[stars-shield]: https://img.shields.io/github/stars/natyrix/traffic-data-warehouse.svg?style=for-the-badge
+[stars-url]: https://github.com/natyrix/traffic-data-warehouse/stargazers
+[issues-shield]: https://img.shields.io/github/issues/natyrix/traffic-data-warehouse.svg?style=for-the-badge
+[issues-url]: https://github.com/natyrix/traffic-data-warehouse/issues
