@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS airflow.raw_data
+CREATE TABLE IF NOT EXISTS railway.raw_data
 (
     track_id bigint,
     " type" text COLLATE pg_catalog."default",
@@ -11,4 +11,4 @@ CREATE TABLE IF NOT EXISTS airflow.raw_data
     " lat_acc" double precision,
     "time" double precision,
     other_data text COLLATE pg_catalog."default"
-)
+);
