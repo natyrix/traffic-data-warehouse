@@ -15,10 +15,11 @@ default_args = {
 
 def load_raw_data(path, table_name):
     print("WRITING DATA")
-    engine = create_engine("postgresql+pygresql://airflow:airflow@host:5432/airflow")
-    df = pd.read_csv(path,sep=";",index_col=False, low_memory=False)
-    df1 = df
-    df = df1.iloc[:, :10]
+    # engine = create_engine("postgresql+pygresql://airflow:airflow@host:5432/airflow")
+    engine = create_engine("mysql+pymysql://root:@localhost/airflow")
+    df = pd.read_csv(path, sep="[,;:]", index_col=False)
+    # df1 = df
+    # df = df1.iloc[:, :10]
     
     df.to_sql(table_name, con=engine, if_exists='replace',index_label='id')
     print("DATA SAVED")
