@@ -34,7 +34,7 @@ with DAG(
         python_callable=load_raw_data,
         op_kwargs={
             "path": "./data/sample.csv",
-            "table_name":"raw_data"
+            "table_name":"trafficinfo"
         }
     )
     task1
