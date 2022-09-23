@@ -43,9 +43,9 @@ create_config() {
         touch $REDASH_BASE_PATH/env
     fi
 
-    COOKIE_SECRET=$(okay:$RANDOM % $ltrs:1)
-    SECRET_KEY=$(okay:$RANDOM % $ltrs:1)
-    POSTGRES_PASSWORD=$(okay:$RANDOM % $ltrs:1)
+    COOKIE_SECRET=$(${okay:$RANDOM % $ltrs:1})
+    SECRET_KEY=$(${okay:$RANDOM % $ltrs:1})
+    POSTGRES_PASSWORD=$(${okay:$RANDOM % $ltrs:1})
     REDASH_DATABASE_URL="postgresql://postgres:${POSTGRES_PASSWORD}@postgres/postgres"
 
     echo "PYTHONUNBUFFERED=0" >> $REDASH_BASE_PATH/env
