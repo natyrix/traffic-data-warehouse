@@ -69,7 +69,6 @@ setup_compose() {
     sudo docker-compose up -d
 }
 
-install_docker
 create_directories
 create_config
 setup_compose

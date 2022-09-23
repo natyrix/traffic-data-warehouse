@@ -15,15 +15,15 @@ default_args={
 def modify_raw_data(location):
     updated_lines=""
     with open(location, 'r', encoding='ISO-8859-1') as f:
-            lines = f.readlines()
-            for index , line in enumerate(lines):
-                if(index == 0):
-                    data = line 
-                each_line = line.split(';')
-                if index != 0:
-                    updated_lines += ";".join(each_line[0:10]) + ";" + "_".join(each_line[10:])
-                else:
-                    updated_lines += ";".join(each_line[:len(each_line)-1]) + ";" + "time" + ";" + "other_data" + "\n" 
+        lines = f.readlines()
+        for index , line in enumerate(lines):
+            if(index == 0):
+                data = line 
+            each_line = line.split(';')
+            if index != 0:
+                updated_lines += ";".join(each_line[0:10]) + ";" + "_".join(each_line[10:])
+            else:
+                updated_lines += ";".join(each_line[:len(each_line)-1]) + ";" + "time" + ";" + "other_data" + "\n" 
     with open('./data/transformed_dataset', "w") as f:
         f.writelines(updated_lines)
 
@@ -42,11 +42,11 @@ with DAG(
             "location": "./data/raw_dataset.csv"
         }
     )
-    # task2 = PostgresOperator(
-    #     task_id='create_database',
-    #     postgres_conn_id='postgres_default',
-    #     sql='/sql/init_db.sql',
-    # )
+    task2 = PostgresOperator(
+        task_id='create_database',
+        postgres_conn_id='postgres_default',
+        sql='/sql/init_db.sql',
+    )
     task3 = PostgresOperator(
         task_id='create_dataset_table',
         postgres_conn_id='postgres_default',
@@ -58,4 +58,4 @@ with DAG(
         sql='/sql/load_raw_data.sql',
     )
 
-    task1 >> task3 >> task4
+    task1 >> task2 >> task3 >> task4

@@ -8,6 +8,7 @@ __pycache__/
 
 data/raw_dataset.csv
 data/transformed_dataset
+data/transformed_dataset.csv
 
 # Distribution / packaging
 .Python
