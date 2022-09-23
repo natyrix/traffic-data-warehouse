@@ -23,7 +23,6 @@ install_docker(){
 }
 
 create_directories() {
-    sudo docker run cmd.cat/pwgen pwgen
     if [[ ! -e $REDASH_BASE_PATH ]]; then
         sudo mkdir -p $REDASH_BASE_PATH
         sudo chown $USER:$USER $REDASH_BASE_PATH
@@ -40,9 +39,9 @@ create_config() {
         touch $REDASH_BASE_PATH/env
     fi
 
-    COOKIE_SECRET=$(pwgen -1s 32)
-    SECRET_KEY=$(pwgen -1s 32)
-    POSTGRES_PASSWORD=$(pwgen -1s 32)
+    COOKIE_SECRET=$($RANDOM)
+    SECRET_KEY=$($RANDOM)
+    POSTGRES_PASSWORD=$($RANDOM)
     REDASH_DATABASE_URL="postgresql://postgres:${POSTGRES_PASSWORD}@postgres/postgres"
 
     echo "PYTHONUNBUFFERED=0" >> $REDASH_BASE_PATH/env
