@@ -23,7 +23,7 @@ install_docker(){
 }
 
 create_directories() {
-    sudo apt-get install pwgen
+    docker run cmd.cat/pwgen pwgen
     if [[ ! -e $REDASH_BASE_PATH ]]; then
         sudo mkdir -p $REDASH_BASE_PATH
         sudo chown $USER:$USER $REDASH_BASE_PATH
