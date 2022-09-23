@@ -35,6 +35,7 @@ create_directories() {
 
 create_config() {
     sudo mkdir -p $REDASH_BASE_PATH
+    sudo apt install wget
     if [[ -e $REDASH_BASE_PATH/env ]]; then
         rm $REDASH_BASE_PATH/env
         touch $REDASH_BASE_PATH/env
