@@ -34,16 +34,14 @@ create_directories() {
 }
 
 create_config() {
-    sudo mkdir -p $REDASH_BASE_PATH
-    sudo apt install wget
     if [[ -e $REDASH_BASE_PATH/env ]]; then
         rm $REDASH_BASE_PATH/env
         touch $REDASH_BASE_PATH/env
     fi
 
-    COOKIE_SECRET="2mC6zPwwWPjl14ZT7yDRy9m9FBZwF48O"
-    SECRET_KEY="FdVh4ynMg1sxwVmRHsj5hs4OZX73yqYj"
-    POSTGRES_PASSWORD="f4MPUOTAsK6CwgN1gmC2PkkNC3jflDbX"
+    COOKIE_SECRET=$(pwgen -1s 32)
+    SECRET_KEY=$(pwgen -1s 32)
+    POSTGRES_PASSWORD=$(pwgen -1s 32)
     REDASH_DATABASE_URL="postgresql://postgres:${POSTGRES_PASSWORD}@postgres/postgres"
 
     echo "PYTHONUNBUFFERED=0" >> $REDASH_BASE_PATH/env
