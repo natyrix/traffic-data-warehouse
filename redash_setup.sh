@@ -34,14 +34,18 @@ create_directories() {
 }
 
 create_config() {
+    okay="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    okay="${okay}0123456789<>/?,>;:[{]}\|=+-_)(^%$#@!~
+    length=10
+    ltrs=${#okay}
     if [[ -e $REDASH_BASE_PATH/env ]]; then
         rm $REDASH_BASE_PATH/env
         touch $REDASH_BASE_PATH/env
     fi
 
-    COOKIE_SECRET=$($RANDOM)
-    SECRET_KEY=$($RANDOM)
-    POSTGRES_PASSWORD=$($RANDOM)
+    COOKIE_SECRET=$(okay:$RANDOM % $ltrs:1)
+    SECRET_KEY=$(okay:$RANDOM % $ltrs:1)
+    POSTGRES_PASSWORD=$(okay:$RANDOM % $ltrs:1)
     REDASH_DATABASE_URL="postgresql://postgres:${POSTGRES_PASSWORD}@postgres/postgres"
 
     echo "PYTHONUNBUFFERED=0" >> $REDASH_BASE_PATH/env
