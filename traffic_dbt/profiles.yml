@@ -1,0 +1,28 @@
+traffic_dbt:
+  outputs:
+
+    dev:
+      type: postgres
+      host: containers-us-west-30.railway.app
+      user: postgres
+      password: nvskFr7xOO8bndqdqh9W
+      port: 7828
+      dbname: railway
+      schema: railway
+      threads: 5
+      keepalives_idle: 0 # default 0, indicating the system default. See below
+      connect_timeout: 10 
+
+    prod:
+      type: postgres
+      host: containers-us-west-30.railway.app
+      user: postgres
+      password: nvskFr7xOO8bndqdqh9W
+      port: 7828
+      dbname: railway
+      schema: railway
+      threads: 5
+      keepalives_idle: 0 # default 0, indicating the system default. See below
+      connect_timeout: 10 
+
+  target: dev
