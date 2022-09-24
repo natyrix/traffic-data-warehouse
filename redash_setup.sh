@@ -2,7 +2,7 @@
 # This script setups dockerized Redash on Ubuntu 18.04.
 set -eu
 
-REDASH_BASE_PATH=/opt/redash
+REDASH_BASE_PATH=/opt/redash_new
 
 install_docker(){
     # Install Docker
