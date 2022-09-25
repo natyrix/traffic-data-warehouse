@@ -27,6 +27,14 @@ with DAG(
         task_id='dbt_test',
         bash_command='dbt test'
     )
+    dbt_gen_docs = BashOperator(
+        task_id='dbt_gen_docs',
+        bash_command='dbt docs generate'
+    )
+    dbt_serve_docs = BashOperator(
+        task_id='dbt_serve_docs',
+        bash_command='dbt docs serve'
+    )
 
-    dbt_run >> dbt_test
+    dbt_run >> dbt_test >> dbt_gen_docs >> dbt_serve_docs
 

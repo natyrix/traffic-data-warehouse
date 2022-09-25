@@ -17,8 +17,6 @@ def modify_raw_data(location):
     with open(location, 'r', encoding='ISO-8859-1') as f:
         lines = f.readlines()
         for index , line in enumerate(lines):
-            if(index == 0):
-                data = line 
             each_line = line.split(';')
             if index != 0:
                 updated_lines += ";".join(each_line[0:10]) + ";" + "_".join(each_line[10:])

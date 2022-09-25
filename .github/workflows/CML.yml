@@ -21,6 +21,6 @@ jobs:
           REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           echo "###  dbt Image" >> report.md
-          cml publish ./images/data_lineage.png --md >> report.md
+          cml publish ./images/speed_and_distance_data_lineage.png --md >> report.md
           
           cml-send-comment report.md
