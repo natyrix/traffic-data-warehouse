@@ -47,6 +47,7 @@ The repository has a number of files including python scripts, jupyter notebooks
 - `EDA.ipynb`: a jupyter notebook that Explanatory Data Analysis
 
 ***
+# Location change through time
 ![Alt text](Path_for_track_id_1.png?raw=true "Tech stack")
 
 ***
@@ -63,6 +64,7 @@ The repository has a number of files including python scripts, jupyter notebooks
 - `README.md`: Markdown text with a brief explanation of the project and the repository structure.
 
 ***
+# Speed comparison between different track_id
 ![Alt text](Speed_comparison_through_time.png?raw=true "Tech stack")
 
 ***
