@@ -3,6 +3,12 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+
+target/
+dbt_packages/
+logs/
+
+
 # C extensions
 *.so
 
