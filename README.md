@@ -15,6 +15,7 @@ Data Engineering: Data warehouse tech stack with MySQL, DBT, Airflow
     - [scripts](#scripts)
     - [tests](#tests)
     - [root folder](#root-folder)
+  - [Installation guide](#Installation-guide)
 
 ***
 
@@ -45,7 +46,10 @@ The repository has a number of files including python scripts, jupyter notebooks
 ### notebooks
 - `EDA.ipynb`: a jupyter notebook that Explanatory Data Analysis
 
+***
+![Alt text](Path_for_track_id_1.png?raw=true "Tech stack")
 
+***
 
 ### scripts
 - Different python utility scripts that have different purposes.
@@ -57,6 +61,20 @@ The repository has a number of files including python scripts, jupyter notebooks
 - `requirements.txt`: a text file lsiting the projet's dependancies
 - `.gitignore`: a text file listing files and folders to be ignored
 - `README.md`: Markdown text with a brief explanation of the project and the repository structure.
+
+***
+![Alt text](Speed_comparison_through_time.png?raw=true "Tech stack")
+
+***
+
+## Installation guide
+Option 1
+```
+git clone https://github.com/natyrix/traffic-data-warehouse
+cd traffic-data-warehouse
+docker-compose up 
+```
+
 
 ***
 
