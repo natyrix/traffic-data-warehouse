@@ -4,7 +4,7 @@ __pycache__/
 *$py.class
 
 
-target/
+
 dbt_packages/
 logs/
 
@@ -82,7 +82,6 @@ instance/
 docs/_build/
 
 # PyBuilder
-target/
 
 # Jupyter Notebook
 .ipynb_checkpoints
